@@ -1,0 +1,173 @@
+:root {
+    /* Colors */
+    --clr-cyan: hsl(179, 62%, 43%);
+    --clr-bright-yellow: hsl(71, 73%, 54%);
+    --clr-light-gray: hsl(204, 43%, 93%);
+    --clr-grayish-blue: hsl(218, 22%, 67%);
+
+    /* Font */
+    --default-font-size: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: "karla", sans-serif;
+    font-size: var(--default-font-size);
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-light-gray);
+}
+
+.grid-container {
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.community__card,
+.subscription__card,
+.whyus__card {
+    max-height: 280px;
+    padding: 2em 3em;
+}
+
+.community__card {
+    grid-column: 1 / 3;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.community__card-title {
+    font-size: 1.75rem;
+    color: var(--clr-cyan);
+    padding-bottom: 0.75em;
+}
+
+.community__card-subtitle {
+    font-size: 1.25rem;
+    padding-bottom: 1em;
+    color: var(--clr-bright-yellow);
+}
+
+.community__card-text {
+    line-height: 1.6;
+    color: var(--clr-grayish-blue);
+}
+
+.subscription__card {
+    background-color: var(--clr-cyan);
+    border-radius: 0 0 0 5px;
+}
+
+.subscription__card-title {
+    font-size: 1.25rem;
+    color: white;
+    padding-bottom: 0.75em;
+}
+
+.subscription__card-price {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.subscription__card-price h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.subscription__card-price p {
+    color: var(--clr-light-gray);
+}
+
+.subscription__card-access {
+    color: white;
+    padding-top: 1em;
+}
+
+.subscription__card-btn {
+    display: block;
+    width: 100%;
+    background-color: var(--clr-bright-yellow);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.75em 0;
+    border: none;
+    border-radius: 5px;
+    margin-top: 2.3em;
+    cursor: pointer;
+}
+
+.whyus__card {
+    background-color: hsl(179, 47%, 52%);
+    border-radius: 0 0 5px 0;
+}
+
+.whyus__card-title {
+    font-size: 1.25rem;
+    color: white;
+    padding-bottom: 0.75em;
+}
+
+.whyus__card-list li {
+    line-height: 1.5;
+    color: var(--clr-light-gray);
+}
+
+@media (max-width: 767px) {
+    .grid-container {
+        max-width: 320px;
+        grid-template-columns: 1fr;
+    }
+
+    .community__card,
+    .subscription__card,
+    .whyus__card {
+        padding: 1.5em;
+    }
+
+    .community__card {
+        grid-column: 1;
+    }
+
+    .community__card-title {
+        font-size: 1.25rem;
+    }
+
+    .community__card-subtitle {
+        font-size: 1rem;
+    }
+
+    .community__card-text {
+        font-size: 0.875rem;
+    }
+
+    .subscription__card {
+        border-radius: 0;
+    }
+
+    .subscription__card-price h2 {
+        font-size: 2rem;
+    }
+
+    .subscription__card-btn {
+        margin-top: 1.5em;
+    }
+
+    .whyus__card {
+        border-radius: 0 0 5px 5px;
+    }
+
+    .whyus__card-list li {
+        font-size: 0.875rem;
+    }
+}
